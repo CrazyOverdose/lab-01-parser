@@ -1,0 +1,18 @@
+{
+  "name": [
+  "jungkook",
+  "taehyung"
+  ],
+
+  "price": 17700,
+
+  "game": [
+  true,
+  false
+  ]
+"population": {
+"Miami": 2344444,
+"Moscow": 7655667,
+}
+
+}
