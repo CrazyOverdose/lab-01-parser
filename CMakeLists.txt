@@ -18,7 +18,7 @@ huntergate(
         SHA1 "70287b1ffa810ee4e952052a9adff9b4856d0d54"
 )
 
-project(json)
+project(my)
 
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
@@ -28,11 +28,8 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/json.cpp
         include/json.hpp include/exsept.hpp)
-
-
 
 find_library(
         GTEST_LOCAL_LIB
@@ -66,8 +63,8 @@ target_include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${GTEST_ROOT}/include
 
-
 )
+
 
 
 target_link_libraries(

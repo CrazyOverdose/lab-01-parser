@@ -24,7 +24,7 @@ public:
     unordered_multimap <string, any> obj; // для объекта
     unordered_multimap <int, any> obj2; // для массива
 
-    vector <string> array;
+
 
     // Конструктор из строки, содержащей Json-данные.
     Json(std::string s);

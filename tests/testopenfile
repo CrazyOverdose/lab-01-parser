@@ -9,10 +9,9 @@
   "game": [
   true,
   false
-  ]
+  ],
 "population": {
 "Miami": 2344444,
 "Moscow": 7655667,
-}
-
+},
 }

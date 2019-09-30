@@ -8,7 +8,8 @@ using namespace std;
 
 Json :: Json(std::string s)
 {
-    bool flag = false; // если объект, то true, если массив, то false
+    bool flag = false;// если объект, то true, если массив, то false
+    vector <string> array;
     for (long unsigned int i=0; i < s.size(); i++)
     {
         int ch1 = 0, ch2 = 0; // ch1 - счётчик {}, ch2 - []
@@ -176,7 +177,7 @@ Json :: Json(std::string s)
                             {
                                 if (help[i] == '}')
                                 {
-                                    for (int l = j; l < i; l++)
+                                    for (int l = j; l < i+1; l++)
                                     {
                                         rek1 = rek1 + help[l];
                                     }
@@ -197,7 +198,7 @@ Json :: Json(std::string s)
                                 if (help[i] == ']')
                                 {
 
-                                    for (int p = j; p < i; p++)
+                                    for (int p = j; p < i+1; p++)
                                     {
                                         rek1 = rek1 + help[p];
                                     }
@@ -217,10 +218,11 @@ Json :: Json(std::string s)
                             {
                                 if (help[i] == '"')
                                 {
-                                    for (int p = j; p < i; p++)
+                                    for (int p = j+1; p < i; p++)
                                     {
                                         rek1 = rek1 + help[p];
                                     }
+                                    break;
                                 }
                             }
 
@@ -236,11 +238,11 @@ Json :: Json(std::string s)
     }
 
     if (flag == false)
-    {
+    {     int ch = 0;
+
         for (long unsigned int m = 0; m < array.size(); m++)
         {
             string help = array[m];
-            int ch = 0;
             for (long unsigned int j = 0; j < help.size(); j++)
             {
                 if (help[j] == 'f' && help[j + 1] == 'a' && help[j + 2] == 'l' && help[j + 3] == 's' && help[j + 4] == 'e')
@@ -288,7 +290,7 @@ Json :: Json(std::string s)
                     {
                         if (help[i] == '}')
                         {
-                            for (int l = j; l < i; l++)
+                            for (int l = j; l < i+1; l++)
                             {
                                 rek1 = rek1 + help[l];
                             }
@@ -308,7 +310,7 @@ Json :: Json(std::string s)
                     {
                         if (help[i] == ']')
                         {
-                            for (int l = j; l < i; l++)
+                            for (int l = j; l < i+1; l++)
                             {
                                 rek1 = rek1 + help[l];
                             }
@@ -329,7 +331,7 @@ Json :: Json(std::string s)
                     {
                         if (help[i] == '"')
                         {
-                            for (int l = j; l < i; l++)
+                            for (int l = j+1; l < i; l++)
                             {
                                 rek1 = rek1 + help[l];
                             }
@@ -352,35 +354,20 @@ Json :: Json(std::string s)
 
 bool Json::is_array() const
 {
-    try
+    if (obj2.size() == 0)
     {
-        if (obj2.size() == 0 || obj.size() != 0)
-        {
-            throw Except();
-        } else {return true;}
+        return false;
     }
-    catch (const std::exception& ex)
-    {
-        cout << ex.what() << endl;
-        exit(0);
-    }
-
+    else{ return true;}
 }
 
 bool Json ::is_object() const
 {
-    try
-    {
-        if (obj.size() == 0 || obj2.size() != 0)
+        if (obj.size() == 0)
         {
-            throw Except();
-        } else{ return true;}
-    }
-    catch (const std::exception& ex)
-    {
-        cout << ex.what() << endl;
-        exit(0);
-    }
+            return false;
+        }
+        else{ return true;}
 
 }
 

@@ -1,10 +1,9 @@
 // Copyright 2018 Your Name <your_email>
 
 #include <gtest/gtest.h>
-#include "json.hpp"
-#include "exsept.hpp"
 #include <fstream>
 
+#include "json.hpp"
 
 TEST(Json, ExampleJson)
 {
@@ -14,59 +13,174 @@ TEST(Json, ExampleJson)
     EXPECT_EQ(std::any_cast<bool>(object["islegal"]), false);
     EXPECT_EQ(std::any_cast<double>(object["age"]), 25);
 
-    Json &marks = *std::any_cast<Json *>(object["marks"]);
+    Json marks = std::any_cast<Json >(object["marks"]);
     EXPECT_EQ(std::any_cast<double>(marks[0]), 4);
     EXPECT_EQ(std::any_cast<double>(marks[1]), 5);
 
-    Json &address = *std::any_cast<Json *>(object["address"]);
+    Json address = std::any_cast<Json >(object["address"]);
     EXPECT_EQ(std::any_cast<std::string>(address["city"]), "Moscow");
     EXPECT_EQ(std::any_cast<std::string>(address["street"]), "Vozdvijenka");
 }
 
-TEST(Json, ParseFile)
+TEST(JsonObject, object)
 {
-    Json json("../tests/testopenfile");
-
+    Json json{ "{ \"grean\" : \"tea\" }" };
     EXPECT_EQ(json.is_object(), true);
     EXPECT_EQ(json.is_array(), false);
+
+    EXPECT_EQ(std::any_cast<std::string>(json["grean"]), "tea");
 }
 
-TEST(Json, OperatorArrayTypeException)
+TEST(JsonObject, inobject)
 {
-    Json json{ "[]" };
+    Json json{ "{ \"my\" : { \"car\":   1230000 } }" };
+    EXPECT_EQ(json.is_object(), true);
+    EXPECT_EQ(json.is_array(), false);
 
-    EXPECT_THROW(
-            json["test"],
-            Except
-    );
+    Json nested = std::any_cast<Json >(json["my"]);
+    EXPECT_EQ(nested.is_object(), true);
+    EXPECT_EQ(nested.is_array(), false);
+
+    EXPECT_EQ(std::any_cast<double>(nested["car"]), 1230000);
 }
 
-TEST(Json, OperatorObjectTypeException)
+TEST(JsonObject, arrays)
 {
-    Json json{ "{}" };
+    Json json{ "{ \"play\" : [true,false,true] }" };
+    EXPECT_EQ(json.is_object(), true);
+    EXPECT_EQ(json.is_array(), false);
 
-    EXPECT_THROW(
-            json[0],
-            Except
-    );
+    Json nested = std::any_cast<Json >(json["play"]);
+    EXPECT_EQ(nested.is_object(), false);
+    EXPECT_EQ(nested.is_array(), true);
+
+    EXPECT_EQ(std::any_cast<bool>(nested[0]), true);
+    EXPECT_EQ(std::any_cast<bool>(nested[1]), false);
+    EXPECT_EQ(std::any_cast<bool>(nested[2]), true);
+
 }
 
-TEST(Json, OperatorArrayExceptionSize)
+TEST(JsonObject, manyinobj)
 {
-    Json json{ "[]" };
+    Json json{ "{ \"blue\" : [\"red\",234,false], \"mum\": \"dad\" }" };
+    EXPECT_EQ(json.is_object(), true);
+    EXPECT_EQ(json.is_array(), false);
 
-    EXPECT_THROW(
-            json[999],
-            Except
-    );
+    Json nested = std::any_cast<Json >(json["blue"]);
+    EXPECT_EQ(nested.is_object(), false);
+    EXPECT_EQ(nested.is_array(), true);
+
+    EXPECT_EQ(std::any_cast<std::string>(nested[0]), "red");
+    EXPECT_EQ(std::any_cast<double>(nested[1]), 234);
+    EXPECT_EQ(std::any_cast<bool>(nested[2]), false);
+
+    EXPECT_EQ(std::any_cast<std::string>(json["mum"]), "dad");
+}
+
+TEST(JsonArray, simple)
+{
+    Json json{ "[ true ]" };
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+
+    EXPECT_EQ(std::any_cast<bool>(json[0]), true);
+}
+
+TEST(JsonArray, hardarray)
+{
+    Json json{ "[true, \"kola\", 53, false]" };
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+
+    EXPECT_EQ(std::any_cast<bool>(json[0]), true);
+    EXPECT_EQ(std::any_cast<std::string>(json[1]), "kola");
+    EXPECT_EQ(std::any_cast<double>(json[2]), 53);
+    EXPECT_EQ(std::any_cast<bool>(json[3]), false);
+}
+
+TEST(JsonArray, NoSpaceBeforeAndAfter)
+{
+    Json json{ "[1]" };
+
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+
+    EXPECT_EQ(std::any_cast<double>(json[0]), 1);
+}
+
+TEST(JsonArray, ArrayWithObjects)
+{
+    Json json{ "[{\"fanta\": \"sprite\"}, {\"price\": 777}, {\"pain\": false}]" };
+
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+
+    {
+        Json nested = std::any_cast<Json >(json[0]);
+        EXPECT_EQ(nested.is_object(), true);
+        EXPECT_EQ(nested.is_array(), false);
+
+        EXPECT_EQ(std::any_cast<std::string>(nested["fanta"]), "sprite");
+    }
+
+    {
+        Json nested = std::any_cast<Json >(json[1]);
+        EXPECT_EQ(nested.is_object(), true);
+        EXPECT_EQ(nested.is_array(), false);
+
+        EXPECT_EQ(std::any_cast<double>(nested["price"]), 777);
+    }
+
+    {
+        Json nested = std::any_cast<Json >(json[2]);
+        EXPECT_EQ(nested.is_object(), true);
+        EXPECT_EQ(nested.is_array(), false);
+
+        EXPECT_EQ(std::any_cast<bool>(nested["pain"]), false);
+    }
 }
 
 
-TEST(Json, NoJson)
+TEST(JsonArray, ArrayWithAnything)
 {
-    EXPECT_THROW
-    (
-            Json json{ "false" },
-            Except
-    );
+    Json json{ "[true, 669,996,[ true, false, true ],\"dream\",{ \"price\" : 98765 },\"love\" ]" };
+
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+
+
+    EXPECT_EQ(std::any_cast<bool>(json[0]), true);
+    EXPECT_EQ(std::any_cast<double>(json[1]), 669);
+
+
+    EXPECT_EQ(std::any_cast<double>(json[2]), 996);
+
+    {
+        Json nested = std::any_cast<Json >(json[3]);
+
+        EXPECT_EQ(nested.is_object(), false);
+        EXPECT_EQ(nested.is_array(), true);
+
+
+        EXPECT_EQ(std::any_cast<bool>(nested[0]), true);
+
+
+        EXPECT_EQ(std::any_cast<bool>(nested[1]), false);
+
+
+        EXPECT_EQ(std::any_cast<bool>(nested[2]), true);
+    }
+
+    // 100
+    EXPECT_EQ(std::any_cast<std::string>(json[4]), "dream");
+
+    {
+        Json nested = std::any_cast<Json >(json[5]);
+        EXPECT_EQ(nested.is_object(), true);
+        EXPECT_EQ(nested.is_array(), false);
+
+        EXPECT_EQ(std::any_cast<double>(nested["price"]), 98765);
+    }
+
+    EXPECT_EQ(std::any_cast<std::string>(json[6]), "love");
 }
