@@ -11,6 +11,8 @@ set(
         CACHE STRING "Default cache server"
 )
 
+
+
 include("tools/gate/cmake/HunterGate.cmake")
 
 huntergate(
@@ -25,7 +27,10 @@ string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
 hunter_add_package(GTest)
+hunter_add_package(nlohmann_json)
+find_package(nlohmann_json CONFIG REQUIRED)
 find_package(GTest CONFIG REQUIRED)
+
 
 add_library(${PROJECT_NAME} STATIC
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/json.cpp
@@ -43,14 +48,22 @@ find_library(
 )
 
 
+add_library(json STATIC sources/json.cpp)
+add_executable(main sources/main.cpp)
+target_link_libraries(main json)
+
+
+
+add_executable(json3 tests/main2.cpp)
+target_link_libraries(json3 nlohmann_json::nlohmann_json)
 
 add_executable(
         tests
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/  include/json.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/  include/exsept.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/main2.cpp
 )
-
 target_include_directories(
         ${PROJECT_NAME}
         PUBLIC
@@ -64,8 +77,6 @@ target_include_directories(
         ${GTEST_ROOT}/include
 
 )
-
-
 
 target_link_libraries(
         tests

@@ -5,7 +5,7 @@
 #ifndef JSON_EXSEPT_H
 #define JSON_EXSEPT_H
 
-#include <json.hpp>
+#include </home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/include/json.hpp>
 #include <exception>
 
 class Except : public exception
