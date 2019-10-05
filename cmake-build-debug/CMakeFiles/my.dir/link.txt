@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmyd.a  CMakeFiles/my.dir/sources/json.cpp.o
-/usr/bin/ranlib libmyd.a

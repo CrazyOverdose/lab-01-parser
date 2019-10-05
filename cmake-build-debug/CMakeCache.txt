@@ -248,30 +248,6 @@ ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/bin/sysctl
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser
-
-//Value Computed by CMake
-json_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
-
-//Value Computed by CMake
-json_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser
-
-//Value Computed by CMake
-lab-01-pasrer_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
-
-//Value Computed by CMake
-lab-01-pasrer_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser
-
-//Value Computed by CMake
-my_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
-
-//Value Computed by CMake
-my_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser
-
-//Value Computed by CMake
 my_project_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
 
 //Value Computed by CMake
@@ -279,12 +255,6 @@ my_project_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-pars
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/home/absinthetoxin/.hunter/_Base/70287b1/169c9bc/b8f46c4/Install/lib/cmake/nlohmann_json
-
-//Value Computed by CMake
-template_BINARY_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug
-
-//Value Computed by CMake
-template_SOURCE_DIR:STATIC=/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser
 
 
 ########################
@@ -454,7 +424,6 @@ HUNTER_SHA1:INTERNAL=70287b1ffa810ee4e952052a9adff9b4856d0d54
 HUNTER_TOOLCHAIN_SHA1:INTERNAL=169c9bc1baa4e29b6b896c00ce7d52a61c181f39
 HUNTER_URL:INTERNAL=https://github.com/ruslo/hunter/archive/v0.23.34.tar.gz
 HUNTER_VERSION:INTERNAL=0.23.34
-JSON_BuildTests:INTERNAL=OFF
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
 ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
