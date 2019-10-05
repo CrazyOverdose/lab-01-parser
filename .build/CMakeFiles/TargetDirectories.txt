@@ -1,0 +1,5 @@
+/home/absinthetoxin/lab-01-parser/.build/CMakeFiles/edit_cache.dir
+/home/absinthetoxin/lab-01-parser/.build/CMakeFiles/test.dir
+/home/absinthetoxin/lab-01-parser/.build/CMakeFiles/template.dir
+/home/absinthetoxin/lab-01-parser/.build/CMakeFiles/rebuild_cache.dir
+/home/absinthetoxin/lab-01-parser/.build/CMakeFiles/tests.dir
