@@ -7,8 +7,7 @@
 
 using json = nlohmann::json;
 
-namespace {
-    TEST(Json_for_modern, parse_) {
+    TEST(Json_nlohman, parse) {
         json empty_array = json::array();
         json my_json = json::array({
                                            {"Si-9.15",                      "RTS-9.15", "GAZP-9.15"},
@@ -47,5 +46,3 @@ namespace {
         EXPECT_EQ(my_json[1]["description"], "Futures contract for index RTS");
         EXPECT_EQ(my_json[2]["description"], "Futures contract for Gazprom shares");
     }
-
-}

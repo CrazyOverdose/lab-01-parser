@@ -11,8 +11,6 @@ set(
         CACHE STRING "Default cache server"
 )
 
-
-
 include("tools/gate/cmake/HunterGate.cmake")
 
 huntergate(
@@ -20,81 +18,65 @@ huntergate(
         SHA1 "70287b1ffa810ee4e952052a9adff9b4856d0d54"
 )
 
-project(my)
 
+project(my_project)
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
 hunter_add_package(GTest)
+find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
-find_package(GTest CONFIG REQUIRED)
 
 
-add_library(${PROJECT_NAME} STATIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/json.cpp
-        include/json.hpp include/exsept.hpp)
+add_library(my_project STATIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/json.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/exsept.hpp
+        sources/json.cpp)
+add_executable(tests
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/main2.cpp
+        )
+
+
+target_include_directories(my_project
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+        nlohmann_json::nlohmann_json
+        )
+target_include_directories(tests
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+        nlohmann_json::nlohmann_json
+        )
 
 find_library(
         GTEST_LOCAL_LIB
         NAMES gtest
-        PATHS ${GTEST_ROOT}/lib
+        PATHS ${PROJECT_NAME}/lib64/
 )
 find_library(
         GTEST_LOCAL_LIB_MAIN
         NAMES gtest_main
-        PATHS ${GTEST_ROOT}/lib
+        PATHS ${PROJECT_NAME}/lib64/
 )
-
-
-add_library(json STATIC sources/json.cpp)
-add_executable(main sources/main.cpp)
-target_link_libraries(main json)
-
-
-
-add_executable(json3 tests/main2.cpp)
-target_link_libraries(json3 nlohmann_json::nlohmann_json)
-
-add_executable(
-        tests
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/  include/json.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/  include/exsept.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/main2.cpp
-)
-target_include_directories(
-        ${PROJECT_NAME}
-        PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_include_directories(
-        tests
-        PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${GTEST_ROOT}/include
-
-)
-
 target_link_libraries(
         tests
-        ${PROJECT_NAME}
+        ${CMAKE_THREAD_LIBS_INIT}
         ${GTEST_LOCAL_LIB}
         ${GTEST_LOCAL_LIB_MAIN}
-        ${CMAKE_THREAD_LIBS_INIT}
+        my_project nlohmann_json::nlohmann_json
 )
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
 if(BUILD_COVERAGE)
-  set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
-  list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-  find_package(codecov)
-  add_coverage(${PROJECT_NAME})
-  add_coverage(tests)
-  list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
-  coverage_evaluate()
+    set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
+    list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+    find_package(codecov)
+    add_coverage(my_project)
+    add_coverage(tests)
+    list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
+    coverage_evaluate()
 endif()
