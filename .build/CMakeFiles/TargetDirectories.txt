@@ -1,0 +1,8 @@
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/test.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/rebuild_cache.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/json.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/json3.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/my.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/main.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/edit_cache.dir
+/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/.build/CMakeFiles/tests.dir
