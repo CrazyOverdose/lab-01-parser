@@ -28,33 +28,33 @@ The CXX compiler identification is GNU, found in "/home/absinthetoxin/CrazyOverd
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_eeb68/fast 
-/usr/bin/make -f CMakeFiles/cmTC_eeb68.dir/build.make CMakeFiles/cmTC_eeb68.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f0214/fast 
+/usr/bin/make -f CMakeFiles/cmTC_f0214.dir/build.make CMakeFiles/cmTC_f0214.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_eeb68.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_eeb68.dir/testCCompiler.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_eeb68
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eeb68.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_eeb68.dir/testCCompiler.c.o  -o cmTC_eeb68 
+Building C object CMakeFiles/cmTC_f0214.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f0214.dir/testCCompiler.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f0214
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0214.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_f0214.dir/testCCompiler.c.o  -o cmTC_f0214 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e8b13/fast 
-/usr/bin/make -f CMakeFiles/cmTC_e8b13.dir/build.make CMakeFiles/cmTC_e8b13.dir/build
+Run Build Command(s):/usr/bin/make cmTC_c00c7/fast 
+/usr/bin/make -f CMakeFiles/cmTC_c00c7.dir/build.make CMakeFiles/cmTC_c00c7.dir/build
 make[1]: Entering directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o   -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o   -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: x86_64-pc-linux-gnu
 Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --enable-multilib --disable-werror --enable-checking=release --enable-default-pie --enable-default-ssp --enable-cet=auto
 Thread model: posix
 gcc version 9.1.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1 -quiet -v /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccabABHk.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1 -quiet -v /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccLiF7g5.s
 GNU C17 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)
 	compiled by GNU C version 9.1.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.21-GMP
 
@@ -72,15 +72,15 @@ GNU C17 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 07f790f36f3287770d39e49f2618fa39
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o /tmp/ccabABHk.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o /tmp/ccLiF7g5.s
 GNU assembler version 2.32 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.32
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_e8b13
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8b13.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o  -o cmTC_e8b13 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_c00c7
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c00c7.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o  -o cmTC_c00c7 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper
@@ -90,9 +90,9 @@ Thread model: posix
 gcc version 9.1.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8b13' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2PHA8m.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e8b13 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8b13' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c00c7' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc15rdah.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c00c7 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c00c7' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -115,19 +115,19 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_e8b13/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e8b13.dir/build.make CMakeFiles/cmTC_e8b13.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_c00c7/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c00c7.dir/build.make CMakeFiles/cmTC_c00c7.dir/build]
   ignore line: [make[1]: Entering directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o   -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o   -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --enable-multilib --disable-werror --enable-checking=release --enable-default-pie --enable-default-ssp --enable-cet=auto]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 9.1.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1 -quiet -v /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccabABHk.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1 -quiet -v /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccLiF7g5.s]
   ignore line: [GNU C17 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.1.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
@@ -145,15 +145,15 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 07f790f36f3287770d39e49f2618fa39]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o /tmp/ccabABHk.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o /tmp/ccLiF7g5.s]
   ignore line: [GNU assembler version 2.32 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.32]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_e8b13]
-  ignore line: [/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8b13.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o  -o cmTC_e8b13 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_c00c7]
+  ignore line: [/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c00c7.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o  -o cmTC_c00c7 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper]
@@ -163,13 +163,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 9.1.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8b13' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2PHA8m.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e8b13 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c00c7' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc15rdah.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c00c7 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc2PHA8m.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc15rdah.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -184,7 +184,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e8b13] ==> ignore
+    arg [cmTC_c00c7] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o] ==> ignore
@@ -193,7 +193,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../..]
-    arg [CMakeFiles/cmTC_e8b13.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_c00c7.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -222,14 +222,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_00b83/fast 
-/usr/bin/make -f CMakeFiles/cmTC_00b83.dir/build.make CMakeFiles/cmTC_00b83.dir/build
+Run Build Command(s):/usr/bin/make cmTC_71c6c/fast 
+/usr/bin/make -f CMakeFiles/cmTC_71c6c.dir/build.make CMakeFiles/cmTC_71c6c.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_00b83.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_00b83.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_00b83
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00b83.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_00b83.dir/feature_tests.c.o  -o cmTC_00b83 
+Building C object CMakeFiles/cmTC_71c6c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_71c6c.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_71c6c
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71c6c.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_71c6c.dir/feature_tests.c.o  -o cmTC_71c6c 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -242,14 +242,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_06ecf/fast 
-/usr/bin/make -f CMakeFiles/cmTC_06ecf.dir/build.make CMakeFiles/cmTC_06ecf.dir/build
+Run Build Command(s):/usr/bin/make cmTC_93423/fast 
+/usr/bin/make -f CMakeFiles/cmTC_93423.dir/build.make CMakeFiles/cmTC_93423.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_06ecf.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_06ecf.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_06ecf
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06ecf.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_06ecf.dir/feature_tests.c.o  -o cmTC_06ecf 
+Building C object CMakeFiles/cmTC_93423.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_93423.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_93423
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93423.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_93423.dir/feature_tests.c.o  -o cmTC_93423 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -262,14 +262,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_be7f5/fast 
-/usr/bin/make -f CMakeFiles/cmTC_be7f5.dir/build.make CMakeFiles/cmTC_be7f5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_6d023/fast 
+/usr/bin/make -f CMakeFiles/cmTC_6d023.dir/build.make CMakeFiles/cmTC_6d023.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_be7f5.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_be7f5.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_be7f5
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be7f5.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_be7f5.dir/feature_tests.c.o  -o cmTC_be7f5 
+Building C object CMakeFiles/cmTC_6d023.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_6d023.dir/feature_tests.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6d023
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d023.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6d023.dir/feature_tests.c.o  -o cmTC_6d023 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -280,33 +280,33 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_a87b5/fast 
-/usr/bin/make -f CMakeFiles/cmTC_a87b5.dir/build.make CMakeFiles/cmTC_a87b5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_8b7e6/fast 
+/usr/bin/make -f CMakeFiles/cmTC_8b7e6.dir/build.make CMakeFiles/cmTC_8b7e6.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_a87b5.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_a87b5.dir/testCXXCompiler.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_a87b5
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a87b5.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_a87b5.dir/testCXXCompiler.cxx.o  -o cmTC_a87b5 
+Building CXX object CMakeFiles/cmTC_8b7e6.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_8b7e6.dir/testCXXCompiler.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_8b7e6
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b7e6.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_8b7e6.dir/testCXXCompiler.cxx.o  -o cmTC_8b7e6 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8cb65/fast 
-/usr/bin/make -f CMakeFiles/cmTC_8cb65.dir/build.make CMakeFiles/cmTC_8cb65.dir/build
+Run Build Command(s):/usr/bin/make cmTC_51d4c/fast 
+/usr/bin/make -f CMakeFiles/cmTC_51d4c.dir/build.make CMakeFiles/cmTC_51d4c.dir/build
 make[1]: Entering directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -v -o CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: x86_64-pc-linux-gnu
 Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --enable-multilib --disable-werror --enable-checking=release --enable-default-pie --enable-default-ssp --enable-cet=auto
 Thread model: posix
 gcc version 9.1.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1plus -quiet -v -D_GNU_SOURCE /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc64rkjX.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1plus -quiet -v -D_GNU_SOURCE /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc3cGcRX.s
 GNU C++14 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)
 	compiled by GNU C version 9.1.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.21-GMP
 
@@ -327,15 +327,15 @@ GNU C++14 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 651b755a2ab2663904afb50163356b15
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc64rkjX.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc3cGcRX.s
 GNU assembler version 2.32 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.32
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_8cb65
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cb65.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8cb65 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_51d4c
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51d4c.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_51d4c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper
@@ -345,9 +345,9 @@ Thread model: posix
 gcc version 9.1.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cb65' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsz1mW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_8cb65 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cb65' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51d4c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDyz3w6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51d4c /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51d4c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -376,19 +376,19 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_8cb65/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8cb65.dir/build.make CMakeFiles/cmTC_8cb65.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_51d4c/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_51d4c.dir/build.make CMakeFiles/cmTC_51d4c.dir/build]
   ignore line: [make[1]: Entering directory '/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -c /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Configured with: /build/gcc/src/gcc/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --enable-multilib --disable-werror --enable-checking=release --enable-default-pie --enable-default-ssp --enable-cet=auto]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 9.1.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1plus -quiet -v -D_GNU_SOURCE /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc64rkjX.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/cc1plus -quiet -v -D_GNU_SOURCE /home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc3cGcRX.s]
   ignore line: [GNU C++14 (GCC) version 9.1.0 (x86_64-pc-linux-gnu)]
   ignore line: [	compiled by GNU C version 9.1.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
@@ -409,15 +409,15 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 651b755a2ab2663904afb50163356b15]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc64rkjX.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc3cGcRX.s]
   ignore line: [GNU assembler version 2.32 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.32]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_8cb65]
-  ignore line: [/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cb65.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8cb65 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_51d4c]
+  ignore line: [/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51d4c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_51d4c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper]
@@ -427,13 +427,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.1.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cb65' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpsz1mW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_8cb65 /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51d4c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDyz3w6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51d4c /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../.. CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccpsz1mW.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccDyz3w6.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -448,7 +448,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8cb65] ==> ignore
+    arg [cmTC_51d4c] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/crtbeginS.o] ==> ignore
@@ -457,7 +457,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/../../..]
-    arg [CMakeFiles/cmTC_8cb65.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_51d4c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -482,14 +482,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6a55c/fast 
-/usr/bin/make -f CMakeFiles/cmTC_6a55c.dir/build.make CMakeFiles/cmTC_6a55c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_aaf0b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_aaf0b.dir/build.make CMakeFiles/cmTC_aaf0b.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_6a55c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_6a55c.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6a55c
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a55c.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_6a55c.dir/feature_tests.cxx.o  -o cmTC_6a55c 
+Building CXX object CMakeFiles/cmTC_aaf0b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_aaf0b.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_aaf0b
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf0b.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_aaf0b.dir/feature_tests.cxx.o  -o cmTC_aaf0b 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -555,14 +555,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_88545/fast 
-/usr/bin/make -f CMakeFiles/cmTC_88545.dir/build.make CMakeFiles/cmTC_88545.dir/build
+Run Build Command(s):/usr/bin/make cmTC_d3000/fast 
+/usr/bin/make -f CMakeFiles/cmTC_d3000.dir/build.make CMakeFiles/cmTC_d3000.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_88545.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_88545.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_88545
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88545.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_88545.dir/feature_tests.cxx.o  -o cmTC_88545 
+Building CXX object CMakeFiles/cmTC_d3000.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_d3000.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d3000
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3000.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_d3000.dir/feature_tests.cxx.o  -o cmTC_d3000 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -628,14 +628,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_4200d/fast 
-/usr/bin/make -f CMakeFiles/cmTC_4200d.dir/build.make CMakeFiles/cmTC_4200d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_0fbd1/fast 
+/usr/bin/make -f CMakeFiles/cmTC_0fbd1.dir/build.make CMakeFiles/cmTC_0fbd1.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_4200d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_4200d.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4200d
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4200d.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_4200d.dir/feature_tests.cxx.o  -o cmTC_4200d 
+Building CXX object CMakeFiles/cmTC_0fbd1.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_0fbd1.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0fbd1
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0fbd1.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_0fbd1.dir/feature_tests.cxx.o  -o cmTC_0fbd1 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -701,14 +701,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_55f1f/fast 
-/usr/bin/make -f CMakeFiles/cmTC_55f1f.dir/build.make CMakeFiles/cmTC_55f1f.dir/build
+Run Build Command(s):/usr/bin/make cmTC_bc730/fast 
+/usr/bin/make -f CMakeFiles/cmTC_bc730.dir/build.make CMakeFiles/cmTC_bc730.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_55f1f.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_55f1f.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_55f1f
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55f1f.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_55f1f.dir/feature_tests.cxx.o  -o cmTC_55f1f 
+Building CXX object CMakeFiles/cmTC_bc730.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_bc730.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_bc730
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc730.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_bc730.dir/feature_tests.cxx.o  -o cmTC_bc730 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -774,14 +774,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_9e89c/fast 
-/usr/bin/make -f CMakeFiles/cmTC_9e89c.dir/build.make CMakeFiles/cmTC_9e89c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_703c0/fast 
+/usr/bin/make -f CMakeFiles/cmTC_703c0.dir/build.make CMakeFiles/cmTC_703c0.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_9e89c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_9e89c.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9e89c
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e89c.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_9e89c.dir/feature_tests.cxx.o  -o cmTC_9e89c 
+Building CXX object CMakeFiles/cmTC_703c0.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_703c0.dir/feature_tests.cxx.o -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_703c0
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_703c0.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_703c0.dir/feature_tests.cxx.o  -o cmTC_703c0 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -845,14 +845,14 @@ make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/la
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d6c24/fast 
-/usr/bin/make -f CMakeFiles/cmTC_d6c24.dir/build.make CMakeFiles/cmTC_d6c24.dir/build
+Run Build Command(s):/usr/bin/make cmTC_0de12/fast 
+/usr/bin/make -f CMakeFiles/cmTC_0de12.dir/build.make CMakeFiles/cmTC_0de12.dir/build
 make[1]: вход в каталог «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_d6c24.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_d6c24.dir/CheckIncludeFile.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_d6c24
-/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6c24.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_d6c24.dir/CheckIncludeFile.c.o  -o cmTC_d6c24 
+Building C object CMakeFiles/cmTC_0de12.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0de12.dir/CheckIncludeFile.c.o   -c /home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0de12
+/home/absinthetoxin/CrazyOverdose/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0de12.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0de12.dir/CheckIncludeFile.c.o  -o cmTC_0de12 
 make[1]: выход из каталога «/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
