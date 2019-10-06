@@ -1,356 +1,286 @@
 //
 // Created by absinthetoxin on 24.09.2019.
 //
+
 #include "json.hpp"
 #include <any>
 #include "exsept.hpp"
 #include <string>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
-Json :: Json(std::string s)
-{
-    bool flag = false;// если объект, то true, если массив, то false
-    vector <string> array;
-    for (long unsigned int i=0; i < s.size(); i++)
-    {
+Json::Json(std::string s) {
+    vector<string> array;
+    bool flag = false;  //для { и [
+    for (long unsigned int i = 0; i < s.size(); i++) {
         int ch1 = 0, ch2 = 0; // ch1 - счётчик {}, ch2 - []
-        if (s[i] == '{')
-        {
+        if (s[i] == '{' && flag == false) {
+            string a = s.substr(i, 1);
+            array.push_back(a);
             flag = true;
+            continue;
+        }
+
+        if (s[i] == '[' && flag == false) {
+            string a = s.substr(i, 1);
+            array.push_back(a);
+            flag = true;
+            continue;
+        }
+
+        if (s[i] == '"') {
+            int h = i + 1;
+            while (s[h] != '"') {
+                h++;
+            }
+            string a = s.substr(i, h - i+1);
+            array.push_back(a);
+            i = h;
+            continue;
+
+        }
+
+        if (s[i] == ':') {
+            string a = s.substr(i, 1);
+            array.push_back(a);
+            continue;
+        }
+
+        if (s[i] == '1' || s[i] == '2' || s[i] == '3' || s[i] == '4' || s[i] == '5' || s[i] == '6' || s[i] == '7' ||
+            s[i] == '8' || s[i] == '9') {
+            int h=i;
+            while (s[h] != ',' && s[h] != ' ' && s[h] != ']' && s[h] != '}') {
+                h++;
+            }
+            string a = s.substr(i, h - i);
+            array.push_back(a);
+            i = h-1;
+            continue;
+        }
+
+        if (s[i] == 'f' && s[i + 1] == 'a' && s[i + 2] == 'l' && s[i + 3] == 's' && s[i + 4] == 'e') {
+
+            string a = s.substr(i, 5);
+            array.push_back(a);
+            i = i + 4;
+            continue;
+        }
+        if (s[i] == 't' && s[i + 1] == 'r' && s[i + 2] == 'u' && s[i + 3] == 'e') {
+
+            string a = s.substr(i, 4);
+            array.push_back(a);
+            i = i + 3;
+            continue;
+        }
+
+        if (s[i] == '{' && flag == true) {
             ch1++;
-            for (long unsigned int j = i + 1; j < s.size(); j++)
-
-            {
-                switch (s[j])
-                {
-                    case '[':
-                        ch2++;
-                        break;
-                    case ']':
-                        ch2--;
-                        break;
-                    case '{':
-                        ch1++;
-                        break;
-                    case '}':
-                        ch1--;
-                        break;
+            for (long unsigned int j = i+1; j < s.length(); j++) {
+                if (s[j] == '}') {
+                    ch1--;
                 }
-                if (s[j] == ',' && ch1 == 1 && ch2 == 0)
-                {
-                    string a = s.substr(i + 1, j - i - 1);
+                if (s[j] == '}' && ch1 == 0) {
+                    string a = s.substr(i, j - i+1);
                     array.push_back(a);
                     i = j;
+                    break;
                 }
 
-                if (s[j] == '}' && ch1 == 0 && ch2 == 0)
-                {
-                    string a = s.substr(i + 1, j - i - 1);
-                    array.push_back(a);
-                    i = j;
+                if (s[j] == '{') {
+                    ch1++;
                 }
             }
+            continue;
         }
 
-        if (s[i] == '[')
-        {
+        if (s[i] == '[' && flag == true) {
             ch2++;
-            for (long unsigned int j = i+1; j < s.size(); j++)
-            {
-                switch (s[j])
-                {
-                    case '[':
-                        ch2++;
-                        break;
-                    case ']':
-                        ch2--;
-                        break;
-                    case '{':
-                        ch1++;
-                        break;
-                    case '}':
-                        ch1--;
-                        break;
+            for (long unsigned int j = i+1; j < s.length(); j++) {
+
+                if (s[j] == ']') {
+                    ch2--;
                 }
-                if (s[j] == ',' && ch2 == 1 && ch1 == 0)
-                {
-                    string a = s.substr(i + 1, j - i - 1);
+
+                if (s[j] == ']' && ch2 == 0) {
+                    string a = s.substr(i, j - i+1);
                     array.push_back(a);
                     i = j;
+                    break;
                 }
-                if (s[j] == ']' && ch2 == 0 && ch1 == 0)
-                {
-                    string a = s.substr(i + 1, j - i - 1);
-                    array.push_back(a);
-                    i = j;
+
+                if (s[j] == '[') {
+                    ch2++;
                 }
             }
+            continue;
         }
-        break;
+        if (s[i] == '}' && i == s.length() - 1) {
+            string a = s.substr(i, 1);
+            array.push_back(a);
+            continue;
+        }
+
+        if (s[i] == ']' && i == s.length() - 1) {
+            string a = s.substr(i, 1);
+            array.push_back(a);
+            continue;
+        }
+        if (s[i] == ',') {
+            string a = s.substr(i, 1);
+            array.push_back(a);
+            continue;
+        }
     }
 
-
-    if (flag == true)
+    string a;
+    for (long unsigned int l = 1; l < array.size(); l++)
     {
-        for (long unsigned int m = 0; m < array.size(); m++)
-        {
-            string help = array[m];
-            string keys="";
-            int ch = 0;
-            for (long unsigned int i = 0; i < help.size(); i++)
-            {
-                if (help[i] == '"')
-                {
-                    i++;
-                    while (help[i] != '"')
-                    {
-                        keys = keys + help[i];
-                        i++;
-                        ch = i;
-                    }
+        a = array[0];
 
-                    if (ch != 0)
-                    {
-                        break;
+        if (a == "{") {
+            for (vector <string>::iterator p = array.begin(); p != array.end(); ++p) {
+                if (*p == "," || *p == "}" || *p == ":" ) {
+                    if (p != array.begin())
+                        array.erase(p--);
+                    else {
+                        array.erase(p);
+                        p = array.begin();
                     }
                 }
             }
 
-            for ( long unsigned int k = (ch + 1); k < help.size(); k++)
+            for (int i = 1; i < array.size(); i++)
             {
-                try
+                string key = array[i];
+
+                key.erase(key.find('"'), 1);
+                key.erase(key.find('"'), 1);
+
+                i++;
+
+                string value = array[i];
+
+                if (value[0] == '"')
                 {
-                    if (help[k] != ':' && help[k] != ' ')
-                    {
-                        throw Except();
-                    }
+                    value.erase(value.find('"'), 1);
+                    value.erase(value.find('"'), 1);
+                    any val = value;
+                    obj.insert({ key, val });
+                    l = i;
+                    continue;
                 }
-                catch (const std::exception& ex)
+
+                if (value[0] == 'f')
                 {
-                    cout << ex.what() << endl;
-                    exit(0);
+                    bool val2 = false;
+                    any val = val2;
+                    obj.insert({ key, val });
+                    l = i;
+                    continue;
                 }
 
-                if (help[k] == ':')
+                if (value[0] == 't')
                 {
-                    for (long unsigned int j = k + 1; j < help.size(); j++)
-                    {
-                        if (help[j] == 'f' && help[j + 1] == 'a' && help[j + 2] == 'l' && help[j + 3] == 's' && help[j+4] == 'e')
-                        {
-                            bool value1 = false;
-                            any value = value1;
-                            obj.insert({ keys , value });
-                            break;
-                        }
-
-                        if (help[j] == 't' && help[j + 1] == 'r' && help[j + 2] == 'u' && help[j + 3] == 'e')
-                        {
-                            bool value1 = true;
-                            any value = value1;
-                            obj.insert({ keys , value });
-                            break;
-                        }
-
-                        if (help[j] == '0' || help[j] == '1' || help[j] == '2' || help[j] == '3' || help[j] == '4' || help[j] == '5' || help[j] == '6' || help[j] == '7' || help[j] == '8' || help[j] == '9')
-                        {
-                            string number1 = ""; double number2 = 0;
-                            while (j != help.size() && help[j] != ' ')
-                            {
-                                number1 = number1 + help[j];
-                                j++;
-                            }
-                            int v = number1.size() - 1;
-                            for (long unsigned int i = 0; i < number1.size(); i++)
-                            {
-                                number2 = number2 + (number1[i] - '0') * pow(10, v);
-                                v--;
-                            }
-                            any value = number2;
-                            obj.insert({ keys , value });
-                            break;
-
-                        }
-
-                        if (help[j] == '{')
-                        {
-                            string rek1;
-                            for (int i = help.size(); i > 0; i--)
-                            {
-                                if (help[i] == '}')
-                                {
-                                    for (int l = j; l < i+1; l++)
-                                    {
-                                        rek1 = rek1 + help[l];
-                                    }
-                                }
-                            }
-
-                            Json rek (rek1);
-                            any value = rek;
-                            obj.insert({ keys , value });
-                            break;
-                        }
-
-                        if (help[j] == '[')
-                        {
-                            string rek1;
-                            for (int i = help.size(); i > 0; i--)
-                            {
-                                if (help[i] == ']')
-                                {
-
-                                    for (int p = j; p < i+1; p++)
-                                    {
-                                        rek1 = rek1 + help[p];
-                                    }
-                                }
-                            }
-
-                            Json rek (rek1);
-                            any value = rek;
-                            obj.insert({ keys , value });
-                            break;
-                        }
-
-                        if (help[j] == '"')
-                        {
-                            string rek1;
-                            for (int i = help.size(); i > 0; i--)
-                            {
-                                if (help[i] == '"')
-                                {
-                                    for (int p = j+1; p < i; p++)
-                                    {
-                                        rek1 = rek1 + help[p];
-                                    }
-                                    break;
-                                }
-                            }
-
-                            any value = rek1;
-                            obj.insert({ keys , value });
-                            break;
-                        }
-                    }
-                    break;
+                    bool val2 = true;
+                    any val = val2;
+                    obj.insert({ key, val });
+                    l = i;
+                    continue;
                 }
+
+                if (value[0] == '[' || value[0] == '{')
+                {
+                    Json my(value);
+                    any val = my;
+                    obj.insert({ key, val });
+                    l = i;
+                    continue;
+                }
+
+                else
+                {
+                    double val2 = stod(value);
+                    any val = val2;
+                    obj.insert({ key, val });
+                    l = i;
+                }
+
             }
         }
-    }
 
-    if (flag == false)
-    {     int ch = 0;
-
-        for (long unsigned int m = 0; m < array.size(); m++)
+        if (a == "[")
         {
-            string help = array[m];
-            for (long unsigned int j = 0; j < help.size(); j++)
+            for (vector <string>::iterator p = array.begin(); p != array.end(); ++p) {
+                if (*p == "," || *p == "]") {
+                    if (p != array.begin())
+                        array.erase(p--);
+                    else {
+                        array.erase(p);
+                        p = array.begin();
+                    }
+                }
+            }
+            int chet = 0;
+            for (int i = 1; i < array.size(); i++)
             {
-                if (help[j] == 'f' && help[j + 1] == 'a' && help[j + 2] == 'l' && help[j + 3] == 's' && help[j + 4] == 'e')
+                string value = array[i];
+
+                if (value[0] == '"')
                 {
-                    bool value1 = false;
-                    any value = value1;
-                    obj2.insert({ ch, value });
-                    ch++;
-                    break;
+                    value.erase(value.find('"'), 1);
+                    value.erase(value.find('"'), 1);
+                    any val = value;
+                    obj2.insert({ chet, val });
+                    l = i;
+                    chet++;
+                    continue;
                 }
 
-                if (help[j] == 't' && help[j + 1] == 'r' && help[j + 2] == 'u' && help[j + 3] == 'e')
+                if (value[0] == 'f')
                 {
-                    bool value1 = true;
-                    any value = value1;
-                    obj2.insert({ ch , value });
-                    ch++;
-                    break;
+                    bool val2 = false;
+                    any val = val2;
+                    obj2.insert({ chet, val });
+                    l = i;
+                    chet++;
+                    continue;
                 }
 
-                if (help[j] == '0' || help[j] == '1' || help[j] == '2' || help[j] == '3' || help[j] == '4' || help[j] == '5' || help[j] == '6' || help[j] == '7' || help[j] == '8' || help[j] == '9')
+                if (value[0] == 't')
                 {
-                    string number1 = ""; double number2 = 0;
-                    while (j != help.size() && help[j] != ' ')
-                    {
-                        number1 = number1 + help[j];
-                        j++;
-                    }
-                    int v = number1.size() - 1;
-                    for ( long unsigned int i = 0; i < number1.size(); i++)
-                    {
-                        number2 = number2 + (number1[i] - '0') * pow(10, v);
-                        v--;
-                    }
-                    any value = number2;
-                    obj2.insert({ ch , value });
-                    ch++;
-                    break;
+                    bool val2 = true;
+                    any val = val2;
+                    obj2.insert({ chet, val });
+                    l = i;
+                    chet++;
+                    continue;
                 }
 
-                if (help[j] == '{')
+                if (value[0] == '[' || value[0] == '{')
                 {
-                    string rek1;
-                    for (int i = help.size(); i > 0; i--)
-                    {
-                        if (help[i] == '}')
-                        {
-                            for (int l = j; l < i+1; l++)
-                            {
-                                rek1 = rek1 + help[l];
-                            }
-                        }
-                    }
-                    Json rek (rek1);
-                    any value = rek;
-                    obj2.insert({ ch , value });
-                    ch++;
-                    break;
+                    Json my(value);
+                    any val = my;
+                    obj2.insert({ chet, val });
+                    l = i;
+                    chet++;
+                    continue;
                 }
 
-                if (help[j] == '[')
+                else
                 {
-                    string rek1;
-                    for (int i = help.size(); i > 0; i--)
-                    {
-                        if (help[i] == ']')
-                        {
-                            for (int l = j; l < i+1; l++)
-                            {
-                                rek1 = rek1 + help[l];
-                            }
-                        }
-                    }
-
-                    Json rek (rek1);
-                    any value = rek;
-                    obj2.insert({ ch , value });
-                    ch++;
-                    break;
+                    double val2 = stod(value);
+                    any val = val2;
+                    obj2.insert({ chet, val });
+                    l = i;
+                    chet++;
                 }
-
-                if (help[j] == '"')
-                {
-                    string rek1;
-                    for (int i = help.size(); i > 0; i--)
-                    {
-                        if (help[i] == '"')
-                        {
-                            for (int l = j+1; l < i; l++)
-                            {
-                                rek1 = rek1 + help[l];
-                            }
-                        }
-                    }
-
-                    any value = rek1;
-                    obj2.insert({ ch , value });
-                    ch++;
-                    break;
-                }
-
-
-
             }
 
         }
     }
+
 }
 
 bool Json::is_array() const
@@ -359,16 +289,16 @@ bool Json::is_array() const
     {
         return false;
     }
-    else{ return true;}
+    else { return true; }
 }
 
-bool Json ::is_object() const
+bool Json::is_object() const
 {
-        if (obj.size() == 0)
-        {
-            return false;
-        }
-        else{ return true;}
+    if (obj.size() == 0)
+    {
+        return false;
+    }
+    else { return true; }
 
 }
 
@@ -376,7 +306,7 @@ any Json::operator[](const std::string& key)
 {
     try
     {
-        if (obj.size() == 0 || obj2.size()!=0)
+        if (obj.size() == 0 || obj2.size() != 0)
         {
             throw Except();
         }
@@ -426,7 +356,7 @@ Json Json::parseFile(const std::string path_to_file)
 {
     ifstream file(path_to_file);
 
-    string line=""; string line2 = "";
+    string line = ""; string line2 = "";
 
     if (!file.is_open()) {
         throw Except();
