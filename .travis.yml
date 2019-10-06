@@ -13,6 +13,7 @@ install:
   - mkdir build
   - cd build
   - cmake ..
+  - make
 
 script:
   - ctest -V
