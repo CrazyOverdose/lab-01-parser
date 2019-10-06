@@ -63,7 +63,6 @@ find_library(
 )
 target_link_libraries(
         tests
-        PUBLIC
         ${CMAKE_THREAD_LIBS_INIT}
         ${GTEST_LOCAL_LIB}
         ${GTEST_LOCAL_LIB_MAIN}
