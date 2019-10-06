@@ -69,6 +69,9 @@ target_link_libraries(
         my_project nlohmann_json::nlohmann_json
 )
 
+
+target_link_libraries(tests GTest::main my_project)
+
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
