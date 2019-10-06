@@ -27,6 +27,7 @@ string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 find_package(Threads)
+
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
@@ -40,7 +41,6 @@ add_executable(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/main2.cpp
         )
-
 
 target_include_directories(my_project
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -63,11 +63,15 @@ find_library(
 )
 target_link_libraries(
         tests
+        PUBLIC
         ${CMAKE_THREAD_LIBS_INIT}
         ${GTEST_LOCAL_LIB}
         ${GTEST_LOCAL_LIB_MAIN}
         my_project nlohmann_json::nlohmann_json
 )
+
+
+target_link_libraries(tests GTest::main my_project)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
@@ -81,3 +85,8 @@ if(BUILD_COVERAGE)
     list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
     coverage_evaluate()
 endif()
+
+
+
+
+
