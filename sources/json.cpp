@@ -1,7 +1,7 @@
 //
 // Created by absinthetoxin on 24.09.2019.
 //
-#include "/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/include/json.hpp"  
+#include <home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/include/json.hpp>
 #include <any>
 #include </home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/include/exsept.hpp>
 #include <string>
