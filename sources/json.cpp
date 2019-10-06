@@ -151,7 +151,7 @@ Json::Json(std::string s) {
                 }
             }
 
-            for (int i = 1; i < array.size(); i++)
+            for (long unsigned int i = 1; i < array.size(); i++)
             {
                 string key = array[i];
 
@@ -223,7 +223,7 @@ Json::Json(std::string s) {
                 }
             }
             int chet = 0;
-            for (int i = 1; i < array.size(); i++)
+            for (long unsigned int i = 1; i < array.size(); i++)
             {
                 string value = array[i];
 
