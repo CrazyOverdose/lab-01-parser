@@ -64,13 +64,11 @@ find_library(
 target_link_libraries(
         tests
         ${CMAKE_THREAD_LIBS_INIT}
-        ${GTEST_LOCAL_LIB}
-        ${GTEST_LOCAL_LIB_MAIN}
+        GTest::main
+        GTest::gtest
         my_project nlohmann_json::nlohmann_json
 )
 
-
-target_link_libraries(tests GTest::main my_project)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)

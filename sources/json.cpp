@@ -7,7 +7,6 @@
 #include "exsept.hpp"
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -30,7 +29,7 @@ Json::Json(std::string s) {
             continue;
         }
 
-        if (s[i] == '"') {
+        if (s[i] == '"' ) {
             int h = i + 1;
             while (s[h] != '"') {
                 h++;
@@ -75,7 +74,7 @@ Json::Json(std::string s) {
             continue;
         }
 
-        if (s[i] == '{' && flag == true) {
+        if (s[i] == '{' && flag == true ) {
             ch1++;
             for (long unsigned int j = i+1; j < s.length(); j++) {
                 if (s[j] == '}') {
@@ -95,7 +94,7 @@ Json::Json(std::string s) {
             continue;
         }
 
-        if (s[i] == '[' && flag == true) {
+        if (s[i] == '[' && flag == true ) {
             ch2++;
             for (long unsigned int j = i+1; j < s.length(); j++) {
 
@@ -132,6 +131,12 @@ Json::Json(std::string s) {
             array.push_back(a);
             continue;
         }
+
+        if (s[i] == ' ')
+        {
+            continue;
+        }
+
     }
 
     string a;
