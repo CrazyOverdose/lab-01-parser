@@ -61,11 +61,11 @@ Json::Json(std::string s) {
         if (s[i] == '1' || s[i] == '2' || s[i] == '3' || s[i] == '4' || s[i] == '5' || s[i] == '6' || s[i] == '7' ||
             s[i] == '8' || s[i] == '9') {
 
-            if (exs != 3 || exs != 1)
-            {
-                Except();
-                exit (17);
-            }
+            if (exs != 1)
+            { if (exs != 3) {
+                    Except();
+                    exit (17);
+                }}
             int h=i;
             int kol=0;
             while (s[h] != ',' && s[h] != ' ' && s[h] != ']' && s[h] != '}') {
