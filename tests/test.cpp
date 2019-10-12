@@ -46,7 +46,7 @@ TEST(JsonObject, inobject)
 
 TEST(JsonObject, arrays)
 {
-    Json json{ "{ \"play\" : [true,false,true] }" };
+    Json json{ "{ \"play\" : [true,false,true]}" };
     EXPECT_EQ(json.is_object(), true);
     EXPECT_EQ(json.is_array(), false);
 
@@ -62,7 +62,7 @@ TEST(JsonObject, arrays)
 
 TEST(JsonObject, manyinobj)
 {
-    Json json{ "{ \"blue\" : [\"red\",234,false], \"mum\": \"dad\" }" };
+    Json json{ "{ \"blue\" : [\"red\",23.4,false], \"mum\": \"dad\" }" };
     EXPECT_EQ(json.is_object(), true);
     EXPECT_EQ(json.is_array(), false);
 
@@ -71,7 +71,7 @@ TEST(JsonObject, manyinobj)
     EXPECT_EQ(nested.is_array(), true);
 
     EXPECT_EQ(std::any_cast<std::string>(nested[0]), "red");
-    EXPECT_EQ(std::any_cast<double>(nested[1]), 234);
+    EXPECT_EQ(std::any_cast<double>(nested[1]), 23.4);
     EXPECT_EQ(std::any_cast<bool>(nested[2]), false);
 
     EXPECT_EQ(std::any_cast<std::string>(json["mum"]), "dad");

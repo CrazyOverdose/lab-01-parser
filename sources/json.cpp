@@ -13,23 +13,32 @@ using namespace std;
 Json::Json(std::string s) {
     vector<string> array;
     bool flag = false;  //для { и [
+    int exs = 0;
     for (long unsigned int i = 0; i < s.size(); i++) {
         int ch1 = 0, ch2 = 0; // ch1 - счётчик {}, ch2 - []
-        if (s[i] == '{' && flag == false) {
+        if (s[i] == '{' && flag == false && exs == 0) {
             string a = s.substr(i, 1);
             array.push_back(a);
             flag = true;
+            exs++;
             continue;
         }
 
-        if (s[i] == '[' && flag == false) {
+        if (s[i] == '[' && flag == false && exs == 0) {
             string a = s.substr(i, 1);
             array.push_back(a);
             flag = true;
+            exs++;
             continue;
         }
 
         if (s[i] == '"' ) {
+            if (exs != 1)
+            { if (exs != 3) {
+                Except();
+                exit (17);
+            }}
+
             int h = i + 1;
             while (s[h] != '"') {
                 h++;
@@ -37,44 +46,65 @@ Json::Json(std::string s) {
             string a = s.substr(i, h - i+1);
             array.push_back(a);
             i = h;
+            exs++;
             continue;
 
         }
 
-        if (s[i] == ':') {
+        if (s[i] == ':' && exs == 2) {
             string a = s.substr(i, 1);
             array.push_back(a);
+            exs++;
             continue;
         }
 
         if (s[i] == '1' || s[i] == '2' || s[i] == '3' || s[i] == '4' || s[i] == '5' || s[i] == '6' || s[i] == '7' ||
             s[i] == '8' || s[i] == '9') {
+
+            if (exs != 3 || exs != 1)
+            {
+                Except();
+                exit (17);
+            }
             int h=i;
+            int kol=0;
             while (s[h] != ',' && s[h] != ' ' && s[h] != ']' && s[h] != '}') {
                 h++;
+                if(s[h]=='.')
+                {
+                    kol++;
+                    if (kol > 1)
+                    {
+                        Except();
+                        exit(17);
+                    }
+                }
             }
             string a = s.substr(i, h - i);
             array.push_back(a);
             i = h-1;
+            exs++;
             continue;
         }
 
-        if (s[i] == 'f' && s[i + 1] == 'a' && s[i + 2] == 'l' && s[i + 3] == 's' && s[i + 4] == 'e') {
+        if (s[i] == 'f' && s[i + 1] == 'a' && s[i + 2] == 'l' && s[i + 3] == 's' && s[i + 4] == 'e' && (exs == 3 || exs == 1)) {
 
             string a = s.substr(i, 5);
             array.push_back(a);
             i = i + 4;
+            exs++;
             continue;
         }
-        if (s[i] == 't' && s[i + 1] == 'r' && s[i + 2] == 'u' && s[i + 3] == 'e') {
+        if (s[i] == 't' && s[i + 1] == 'r' && s[i + 2] == 'u' && s[i + 3] == 'e' && (exs == 3 || exs == 1)) {
 
             string a = s.substr(i, 4);
             array.push_back(a);
             i = i + 3;
+            exs++;
             continue;
         }
 
-        if (s[i] == '{' && flag == true ) {
+        if (s[i] == '{' && flag == true && (exs == 3 || exs == 1)) {
             ch1++;
             for (long unsigned int j = i+1; j < s.length(); j++) {
                 if (s[j] == '}') {
@@ -91,10 +121,11 @@ Json::Json(std::string s) {
                     ch1++;
                 }
             }
+            exs++;
             continue;
         }
 
-        if (s[i] == '[' && flag == true ) {
+        if (s[i] == '[' && flag == true && (exs == 3 || exs == 1 )) {
             ch2++;
             for (long unsigned int j = i+1; j < s.length(); j++) {
 
@@ -113,6 +144,7 @@ Json::Json(std::string s) {
                     ch2++;
                 }
             }
+            exs++;
             continue;
         }
         if (s[i] == '}' && i == s.length() - 1) {
@@ -126,15 +158,21 @@ Json::Json(std::string s) {
             array.push_back(a);
             continue;
         }
-        if (s[i] == ',') {
+        if (s[i] == ',' && (exs == 4 || exs == 2)){
             string a = s.substr(i, 1);
             array.push_back(a);
+            exs = 1;
             continue;
         }
 
         if (s[i] == ' ')
         {
             continue;
+        }
+        else
+        {
+            Except();
+            exit (17);
         }
 
     }
