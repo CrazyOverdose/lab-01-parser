@@ -1,7 +1,6 @@
 //
 // Created by absinthetoxin on 24.09.2019.
 //
-
 #include "json.hpp"
 #include <any>
 #include "exsept.hpp"

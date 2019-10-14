@@ -1,5 +1,3 @@
-// Copyright 2018 Your Name <your_email>
-
 #include <gtest/gtest.h>
 #include <fstream>
 
@@ -98,7 +96,7 @@ TEST(JsonArray, hardarray)
     EXPECT_EQ(std::any_cast<bool>(json[3]), false);
 }
 
-TEST(JsonArray, NoSpaceBeforeAndAfter)
+TEST(JsonArray, nospace)
 {
     Json json{ "[1]" };
 
@@ -108,7 +106,7 @@ TEST(JsonArray, NoSpaceBeforeAndAfter)
     EXPECT_EQ(std::any_cast<double>(json[0]), 1);
 }
 
-TEST(JsonArray, ArrayWithObjects)
+TEST(JsonArray, arraywithobjects)
 {
     Json json{ "[{\"fanta\": \"sprite\"}, {\"price\": 777}, {\"pain\": false}]" };
 
@@ -141,7 +139,7 @@ TEST(JsonArray, ArrayWithObjects)
 }
 
 
-TEST(JsonArray, ArrayWithAnything)
+TEST(JsonArray, array_with_anything)
 {
     Json json{ "[true, 669,996,[ true, false, true ],\"dream\",{ \"price\" : 98765 },\"love\" ]" };
 
