@@ -1,6 +1,8 @@
-#! /bin/sh
+#!/bin/bash
 
-set -ex
+set -e
 
-cmake -H. -B .build || 1
-./scripts/hunter-gtest-fix.sh
+echo "TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG" > .env
+echo "TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST" >> .env
+echo "TRAVIS_BRANCH=$TRAVIS_BRANCH" >> .env
+echo "TRAVIS_COMMIT=$TRAVIS_COMMIT" >> .env
