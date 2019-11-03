@@ -223,3 +223,12 @@ TEST(Json, ParseFile)
     EXPECT_EQ(json.is_object(), false);
     EXPECT_EQ(json.is_array(), true);
 }
+
+TEST(Json, Parse)
+{
+    //auto json = Json::parseFile("/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/tests/testparsefile.json");
+    auto json = Json::parse("{\"key\" : \"value\"}");
+
+    EXPECT_EQ(json.is_object(), true);
+    EXPECT_EQ(json.is_array(), false);
+}
