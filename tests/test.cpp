@@ -239,3 +239,19 @@ TEST(Json, Parse)
     EXPECT_EQ(json.is_object(), true);
     EXPECT_EQ(json.is_array(), false);
 }
+
+TEST(JsonArray, array_in_array)
+{
+    Json json{ "[ false, [[false], 1, 3], true]" };
+
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+}
+
+TEST(JsonArray,  obj_in_obj)
+{
+    Json json{ "[ false, { \"key\" : {\"key2\" : false}}, 1, 3, true]" };
+
+    EXPECT_EQ(json.is_object(), false);
+    EXPECT_EQ(json.is_array(), true);
+}
