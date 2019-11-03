@@ -52,10 +52,10 @@ public:
     std::any operator[](int index);
 
     //// Метод возвращает объект класса Json из строки, содержащей Json-данные.
-    Json parse(const std::string& s);
+    static Json parse(const std::string& s);
 
     //// Метод возвращает объекта класса Json из файла, содержащего Json-данные в текстовом формате.
-    Json parseFile(const std::string path_to_file);
+    static Json parseFile(const std::string& path_to_file);
 };
 
 

@@ -16,18 +16,18 @@ void Json::object(string s, size_t i)
     while (start < s.size())
     {
         if (s[start] != '\"')
-            Except();
+            throw Except();
         string key = s.substr(start+1, s.find('\"', start+1)-start - 1);
         start = s.find('\"', start + 1)+1;
         if (s[start] != ':')
-            Except();
+            throw Except();
         any val = get <0>(value(s, start+1));
         start += get <1>(value(s, start+1));
         if (s[start] == '}')
         { obj.insert({ key, val });
             break; }
         if (s[start] != ',')
-            Except();
+            throw Except();
         ++start;
         obj.insert({ key, val });
 
@@ -46,7 +46,7 @@ void Json::array(string s, size_t i)
         { arr.insert({ ch, val });
             break; }
         if (s[start] != ',')
-            Except();
+            throw Except();
         if (s[start] == ']')
             start = s.size()-1;
         arr.insert({ ch, val });
@@ -97,9 +97,9 @@ pair <any, size_t> Json::numbers(string s, size_t start)
 {
     pair<any, int> p;
     size_t a; any value;
-                size_t a1 = s.find(',', start);
-                size_t a2 = s.find(']', start);
-                size_t a3 = s.find('}', start);
+    size_t a1 = s.find(',', start);
+    size_t a2 = s.find(']', start);
+    size_t a3 = s.find('}', start);
 
     if (a1 < a2 && a1 < a3) {
         double value1 = stod(s.substr(start, s.find(',', start) - start));
@@ -128,19 +128,19 @@ pair <any, size_t> Json::special1(string s, size_t start) {
     pair<any, int> p;
     size_t finish = start+1;
     size_t a = 1;
-        while (true) {
-            if (s[finish] == '{')
-                ++a;
-            if (s[finish] == '}' && a != 0)
-                --a;
-            if (s[finish] == '}' && a == 0){
-                Json te(s.substr(start, finish - start+1));
-                any value = te;
-                return p = make_pair(value, finish + 2 - start);
-            }
-            ++finish;
+    while (true) {
+        if (s[finish] == '{')
+            ++a;
+        if (s[finish] == '}' && a != 0)
+            --a;
+        if (s[finish] == '}' && a == 0){
+            Json te(s.substr(start, finish - start+1));
+            any value = te;
+            return p = make_pair(value, finish + 2 - start);
         }
+        ++finish;
     }
+}
 pair <any, size_t> Json::special2(string s, size_t start) {
     pair<any, int> p;
     size_t finish = start+1;
@@ -160,19 +160,17 @@ pair <any, size_t> Json::special2(string s, size_t start) {
         }
     }
 }
-    Json::Json(std::string s)
-    {
-        for (size_t p = 0; p < s.size(); ++p) {
-            if (s[p] == '\n' || s[p] == '\r' || s[p] == '\t' || s[p] == ' ')
-                s.erase(p, 1); }
+Json::Json(std::string s)
+{
+    for (size_t p = 0; p < s.size(); ++p) {
+        if (s[p] == '\n' || s[p] == '\r' || s[p] == '\t' || s[p] == ' ')
+            s.erase(p, 1); }
 
-        if (s[0] == '{')
-            object(s, 1);
-        if (s[0] == '[')
-            array(s, 1);
-        else
-            Except();
-    }
+    if (s[0] == '{')
+        object(s, 1);
+    if (s[0] == '[')
+        array(s, 1);
+}
 
 bool Json::is_array() const
 {
@@ -243,7 +241,7 @@ std::any Json::operator[](int index)
 }
 
 
-Json Json::parseFile(const std::string path_to_file)
+Json Json::parseFile(const std::string& path_to_file)
 {
     ifstream file(path_to_file);
 

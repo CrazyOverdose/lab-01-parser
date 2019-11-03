@@ -2,6 +2,7 @@
 #include <fstream>
 
 #include "json.hpp"
+#include "exsept.hpp"
 
 TEST(Json, ExampleJson)
 {
@@ -192,3 +193,24 @@ EXPECT_EQ(json.is_array(), true);
 EXPECT_EQ(json[0].has_value(), true);
 }
 
+
+TEST(JsonObject, exc1) {
+    EXPECT_THROW(
+            Json{"{,"},
+            Except
+    );
+}
+
+TEST(JsonObject, exc2) {
+    EXPECT_THROW(
+            Json{"{\"key\" 23"},
+            Except
+    );
+}
+
+TEST(JsonObject, exs3) {
+    EXPECT_THROW(
+            Json{"{\"key\" : false \"key2\""},
+            Except
+    );
+}

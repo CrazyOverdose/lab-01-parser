@@ -11,10 +11,12 @@
 class Except : public exception
 {
 public:
+
     const char*what() const noexcept
     {
         return "Error: Wrong input\n";
     }
 };
+
 
 #endif //JSON_EXSEPT_H
