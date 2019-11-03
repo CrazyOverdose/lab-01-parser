@@ -1,6 +1,7 @@
 //
 // Created by absinthetoxin on 24.09.2019.
 //
+
 #include "json.hpp"
 #include <any>
 #include "exsept.hpp"
@@ -9,325 +10,173 @@
 
 using namespace std;
 
-Json::Json(std::string s) {
-    vector<string> array;
-    bool flag = false;  //для { и [
-    int exs = 0;
-    for (long unsigned int i = 0; i < s.size(); i++) {
-        int ch1 = 0, ch2 = 0; // ch1 - счётчик {}, ch2 - []
-        if (s[i] == '{' && flag == false && exs == 0) {
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            flag = true;
-            exs++;
-            continue;
-        }
-
-        if (s[i] == '[' && flag == false && exs == 0) {
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            flag = true;
-            exs++;
-            continue;
-        }
-
-        if (s[i] == '"' ) {
-            if (exs != 1)
-            { if (exs != 3) {
-                Except();
-                exit (17);
-            }}
-
-            int h = i + 1;
-            while (s[h] != '"') {
-                h++;
-            }
-            string a = s.substr(i, h - i+1);
-            array.push_back(a);
-            i = h;
-            exs++;
-            continue;
-
-        }
-
-        if (s[i] == ':' && exs == 2) {
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            exs++;
-            continue;
-        }
-
-        if (s[i] == '1' || s[i] == '2' || s[i] == '3' || s[i] == '4' || s[i] == '5' || s[i] == '6' || s[i] == '7' ||
-            s[i] == '8' || s[i] == '9') {
-
-            if (exs != 1)
-            { if (exs != 3) {
-                    Except();
-                    exit (17);
-                }}
-            int h=i;
-            int kol=0;
-            while (s[h] != ',' && s[h] != ' ' && s[h] != ']' && s[h] != '}') {
-                h++;
-                if(s[h]=='.')
-                {
-                    kol++;
-                    if (kol > 1)
-                    {
-                        Except();
-                        exit(17);
-                    }
-                }
-            }
-            string a = s.substr(i, h - i);
-            array.push_back(a);
-            i = h-1;
-            exs++;
-            continue;
-        }
-
-        if (s[i] == 'f' && s[i + 1] == 'a' && s[i + 2] == 'l' && s[i + 3] == 's' && s[i + 4] == 'e' && (exs == 3 || exs == 1)) {
-
-            string a = s.substr(i, 5);
-            array.push_back(a);
-            i = i + 4;
-            exs++;
-            continue;
-        }
-        if (s[i] == 't' && s[i + 1] == 'r' && s[i + 2] == 'u' && s[i + 3] == 'e' && (exs == 3 || exs == 1)) {
-
-            string a = s.substr(i, 4);
-            array.push_back(a);
-            i = i + 3;
-            exs++;
-            continue;
-        }
-
-        if (s[i] == '{' && flag == true && (exs == 3 || exs == 1)) {
-            ch1++;
-            for (long unsigned int j = i+1; j < s.length(); j++) {
-                if (s[j] == '}') {
-                    ch1--;
-                }
-                if (s[j] == '}' && ch1 == 0) {
-                    string a = s.substr(i, j - i+1);
-                    array.push_back(a);
-                    i = j;
-                    break;
-                }
-
-                if (s[j] == '{') {
-                    ch1++;
-                }
-            }
-            exs++;
-            continue;
-        }
-
-        if (s[i] == '[' && flag == true && (exs == 3 || exs == 1 )) {
-            ch2++;
-            for (long unsigned int j = i+1; j < s.length(); j++) {
-
-                if (s[j] == ']') {
-                    ch2--;
-                }
-
-                if (s[j] == ']' && ch2 == 0) {
-                    string a = s.substr(i, j - i+1);
-                    array.push_back(a);
-                    i = j;
-                    break;
-                }
-
-                if (s[j] == '[') {
-                    ch2++;
-                }
-            }
-            exs++;
-            continue;
-        }
-        if (s[i] == '}' && i == s.length() - 1) {
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            continue;
-        }
-
-        if (s[i] == ']' && i == s.length() - 1) {
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            continue;
-        }
-        if (s[i] == ',' && (exs == 4 || exs == 2)){
-            string a = s.substr(i, 1);
-            array.push_back(a);
-            exs = 1;
-            continue;
-        }
-
-        if (s[i] == ' ')
-        {
-            continue;
-        }
-        else
-        {
-            Except();
-            exit (17);
-        }
-
-    }
-
-    string a;
-    for (long unsigned int l = 1; l < array.size(); l++)
+void Json::object(string s, size_t i)
+{
+    size_t start = i;
+    while (start < s.size())
     {
-        a = array[0];
+        if (s[start] != '\"')
+            Except();
+        string key = s.substr(start+1, s.find('\"', start+1)-start - 1);
+        start = s.find('\"', start + 1)+1;
+        if (s[start] != ':')
+            Except();
+        any val = get <0>(value(s, start+1));
+        start += get <1>(value(s, start+1));
+        if (s[start] == '}')
+        { obj.insert({ key, val });
+            break; }
+        if (s[start] != ',')
+            Except();
+        ++start;
+        obj.insert({ key, val });
 
-        if (a == "{") {
-            for (vector <string>::iterator p = array.begin(); p != array.end(); ++p) {
-                if (*p == "," || *p == "}" || *p == ":" ) {
-                    if (p != array.begin())
-                        array.erase(p--);
-                    else {
-                        array.erase(p);
-                        p = array.begin();
-                    }
-                }
-            }
+    }
+}
 
-            for (long unsigned int i = 1; i < array.size(); i++)
-            {
-                string key = array[i];
+void Json::array(string s, size_t i)
+{
+    size_t start = i;
+    size_t ch = 0;
+    while (start < s.size())
+    {
+        any val = get <0> (value(s, start));
+        start = start - 1 + get <1>(value(s, start));
+        if (s[start] == ']')
+        { arr.insert({ ch, val });
+            break; }
+        if (s[start] != ',')
+            Except();
+        if (s[start] == ']')
+            start = s.size()-1;
+        arr.insert({ ch, val });
+        ++start; ++ch;
+    }
+}
 
-                key.erase(key.find('"'), 1);
-                key.erase(key.find('"'), 1);
+pair <any, int> Json:: value(string s, size_t i) {
+    pair<any, int> p;
 
-                i++;
+    size_t start = i;
 
-                string value = array[i];
-
-                if (value[0] == '"')
-                {
-                    value.erase(value.find('"'), 1);
-                    value.erase(value.find('"'), 1);
-                    any val = value;
-                    obj.insert({ key, val });
-                    l = i;
-                    continue;
-                }
-
-                if (value[0] == 'f')
-                {
-                    bool val2 = false;
-                    any val = val2;
-                    obj.insert({ key, val });
-                    l = i;
-                    continue;
-                }
-
-                if (value[0] == 't')
-                {
-                    bool val2 = true;
-                    any val = val2;
-                    obj.insert({ key, val });
-                    l = i;
-                    continue;
-                }
-
-                if (value[0] == '[' || value[0] == '{')
-                {
-                    Json my(value);
-                    any val = my;
-                    obj.insert({ key, val });
-                    l = i;
-                    continue;
-                }
-
-                else
-                {
-                    double val2 = stod(value);
-                    any val = val2;
-                    obj.insert({ key, val });
-                    l = i;
-                }
-
-            }
-        }
-
-        if (a == "[")
-        {
-            for (vector <string>::iterator p = array.begin(); p != array.end(); ++p) {
-                if (*p == "," || *p == "]") {
-                    if (p != array.begin())
-                        array.erase(p--);
-                    else {
-                        array.erase(p);
-                        p = array.begin();
-                    }
-                }
-            }
-            int chet = 0;
-            for (long unsigned int i = 1; i < array.size(); i++)
-            {
-                string value = array[i];
-
-                if (value[0] == '"')
-                {
-                    value.erase(value.find('"'), 1);
-                    value.erase(value.find('"'), 1);
-                    any val = value;
-                    obj2.insert({ chet, val });
-                    l = i;
-                    chet++;
-                    continue;
-                }
-
-                if (value[0] == 'f')
-                {
-                    bool val2 = false;
-                    any val = val2;
-                    obj2.insert({ chet, val });
-                    l = i;
-                    chet++;
-                    continue;
-                }
-
-                if (value[0] == 't')
-                {
-                    bool val2 = true;
-                    any val = val2;
-                    obj2.insert({ chet, val });
-                    l = i;
-                    chet++;
-                    continue;
-                }
-
-                if (value[0] == '[' || value[0] == '{')
-                {
-                    Json my(value);
-                    any val = my;
-                    obj2.insert({ chet, val });
-                    l = i;
-                    chet++;
-                    continue;
-                }
-
-                else
-                {
-                    double val2 = stod(value);
-                    any val = val2;
-                    obj2.insert({ chet, val });
-                    l = i;
-                    chet++;
-                }
-            }
-
-        }
+    if (s.substr(start, 5) == "false") {
+        bool value1 = false;
+        any value = value1;
+        return p = make_pair(value, 6);
     }
 
+    if (s.substr(start, 4) == "true") {
+        bool value1 = true;
+        any value = value1;
+        return p = make_pair(value, 5);
+    }
+
+    if (s.substr(start, 4) == "null") {
+        auto value1 = nullptr;
+        any value = value1;
+        return p = make_pair(value, 5);
+    }
+
+    if (s[start] == '\"') {
+        string value1 = s.substr(start + 1, s.find('\"', start + 1) - start - 1);
+        any value = value1;
+        return p = make_pair(value, s.find('\"', start + 1) + 2 - start);
+    }
+
+    if (s[start] == '[')
+        return special2(s, start);
+
+    if (s[start] == '{')
+        return special1(s, start);
+
+    else
+        return numbers(s, start);
 }
+
+pair <any, size_t> Json::numbers(string s, size_t start)
+{
+    pair<any, int> p;
+    size_t a; any value;
+                size_t a1 = s.find(',', start);
+                size_t a2 = s.find(']', start);
+                size_t a3 = s.find('}', start);
+
+    if (a1 < a2 && a1 < a3) {
+        double value1 = stod(s.substr(start, s.find(',', start) - start));
+        value = value1;
+        a =s.find(',', start + 1) + 1 - start;
+    }
+
+    if (a2 < a1 && a2 < a3) {
+        double value1 = stod(s.substr(start, s.find(']', start) - start));
+        value = value1;
+        a =s.find(']', start + 1) + 1 - start;
+    }
+
+    if (a3 < a2 && a3 < a1) {
+        double value1 = stod(s.substr(start, s.find('}', start) - start));
+        value = value1;
+        a = s.find('}', start + 1) + 1 - start;
+    }
+
+    return p = make_pair(value, a);
+}
+
+
+
+pair <any, size_t> Json::special1(string s, size_t start) {
+    pair<any, int> p;
+    size_t finish = start+1;
+    size_t a = 1;
+        while (true) {
+            if (s[finish] == '{')
+                ++a;
+            if (s[finish] == '}' && a != 0)
+                --a;
+            if (s[finish] == '}' && a == 0){
+                Json te(s.substr(start, finish - start+1));
+                any value = te;
+                return p = make_pair(value, finish + 2 - start);
+            }
+            ++finish;
+        }
+    }
+pair <any, size_t> Json::special2(string s, size_t start) {
+    pair<any, int> p;
+    size_t finish = start+1;
+    size_t b = 1;
+    while (true) {
+        {
+            if (s[finish] == ']' && b != 0)
+                --b;
+            if (s[finish] == '[')
+                ++b;
+            if (s[finish] == ']' && b == 0) {
+                Json te(s.substr(start, finish - start+1));
+                any value = te;
+                return p = make_pair(value, finish + 2 - start);
+            }
+            ++finish;
+        }
+    }
+}
+    Json::Json(std::string s)
+    {
+        for (size_t p = 0; p < s.size(); ++p) {
+            if (s[p] == '\n' || s[p] == '\r' || s[p] == '\t' || s[p] == ' ')
+                s.erase(p, 1); }
+
+        if (s[0] == '{')
+            object(s, 1);
+        if (s[0] == '[')
+            array(s, 1);
+        else
+            Except();
+    }
 
 bool Json::is_array() const
 {
-    if (obj2.size() == 0)
+    if (arr.size() == 0)
     {
         return false;
     }
@@ -348,7 +197,7 @@ any Json::operator[](const std::string& key)
 {
     try
     {
-        if (obj.size() == 0 || obj2.size() != 0)
+        if (obj.size() == 0 || arr.size() != 0)
         {
             throw Except();
         }
@@ -373,14 +222,14 @@ std::any Json::operator[](int index)
 {
     try
     {
-        if (obj2.size() == 0 || obj.size() != 0)
+        if (arr.size() == 0 || obj.size() != 0)
         {
             throw Except();
         }
 
         else
         {
-            any search = obj2.find(index)->second;
+            any search = arr.find(index)->second;
 
             return search;
         }

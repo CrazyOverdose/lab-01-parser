@@ -5,6 +5,7 @@
 #ifndef UNTITLED2_JSON_H
 #define UNTITLED2_JSON_H
 
+#pragma once
 #include <any>
 #include <iostream>
 #include <string>
@@ -22,9 +23,14 @@ class Json
 public:
 
     unordered_multimap <string, any> obj; // для объекта
-    unordered_multimap <int, any> obj2; // для массива
+    unordered_multimap <int, any> arr; // для массива
 
-
+    void object(string s, size_t i);
+    void array(string s, size_t i);
+    pair <any, int> value(string s, size_t i);
+    pair <any, size_t> special1(string s, size_t start);
+    pair <any, size_t> special2(string s, size_t start);
+    pair <any, size_t> numbers(string s, size_t start);
 
     // Конструктор из строки, содержащей Json-данные.
     Json(std::string s);
