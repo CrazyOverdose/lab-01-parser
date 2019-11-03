@@ -9,11 +9,9 @@ jobs:
   include:
     - name: "tests"
       script:
-          - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/tests.sh
-    - name: "quality"
+        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/tests.sh
+    - name: "coverage"
       script:
-          - ./scripts/genenv.sh
-          - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/coverage.sh
-
-  notifications:
-    email: false
+        - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/coverage.sh
+notifications:
+  email: false
