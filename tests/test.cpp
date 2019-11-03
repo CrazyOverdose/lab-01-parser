@@ -142,7 +142,7 @@ TEST(JsonArray, arraywithobjects)
 
 TEST(JsonArray, array_with_anything)
 {
-    Json json{ "[true, 669,996,[ true, false, 34 ],\"dream\",{ \"price\" : 98765 },\"love\" ]" };
+    Json json{ "[true, 669,996,[ true, false, true ],\"dream\",{ \"price\" : 98765 },\"love\" ]" };
 
     EXPECT_EQ(json.is_object(), false);
     EXPECT_EQ(json.is_array(), true);
