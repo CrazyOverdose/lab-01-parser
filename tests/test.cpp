@@ -217,7 +217,8 @@ TEST(JsonObject, exs3) {
 
 TEST(Json, ParseFile)
 {
-    auto json = Json::parseFile("/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/tests/testparsefile.json");
+    //auto json = Json::parseFile("/home/absinthetoxin/CrazyOverdose/lab01/lab-01-parser/tests/testparsefile.json");
+    auto json = Json::parseFile("../tests/testparsefile.json");
 
     EXPECT_EQ(json.is_object(), false);
     EXPECT_EQ(json.is_array(), true);
