@@ -47,8 +47,6 @@ void Json::array(string s, size_t i)
             break; }
         if (s[start] != ',')
             throw Except();
-        if (s[start] == ']')
-            start = s.size()-1;
         arr.insert({ ch, val });
         ++start; ++ch;
     }
@@ -193,8 +191,6 @@ bool Json::is_object() const
 
 any Json::operator[](const std::string& key)
 {
-    try
-    {
         if (obj.size() == 0 || arr.size() != 0)
         {
             throw Except();
@@ -206,20 +202,11 @@ any Json::operator[](const std::string& key)
 
             return search;
         }
-    }
-    catch (const std::exception& ex)
-    {
-        cout << ex.what() << endl;
-        exit(0);
-    }
-
 
 }
 
 std::any Json::operator[](int index)
 {
-    try
-    {
         if (arr.size() == 0 || obj.size() != 0)
         {
             throw Except();
@@ -231,13 +218,6 @@ std::any Json::operator[](int index)
 
             return search;
         }
-    }
-    catch (const std::exception& ex)
-    {
-        cout << ex.what() << endl;
-        exit(0);
-    }
-
 }
 
 
