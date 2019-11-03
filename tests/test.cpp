@@ -182,3 +182,13 @@ TEST(JsonArray, array_with_anything)
 
     EXPECT_EQ(std::any_cast<std::string>(json[6]), "love");
 }
+
+TEST(JsonArray, ArrayNull)
+{
+Json json{ "[ null ]" };
+EXPECT_EQ(json.is_object(), false);
+EXPECT_EQ(json.is_array(), true);
+
+EXPECT_EQ(json[0].has_value(), true);
+}
+
