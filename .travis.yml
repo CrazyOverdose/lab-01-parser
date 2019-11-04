@@ -7,6 +7,10 @@ services:
 
 jobs:
   include:
+    - name: "quality"
+          script:
+            - ./scripts/genenv.sh
+            - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/duplication.sh
     - name: "tests"
       script:
         - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/tests.sh
