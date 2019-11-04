@@ -250,6 +250,5 @@ Json Json::parse(const std::string& s)
 {
     string line = s;
     Json obj3(line);
-
     return obj3;
 }
