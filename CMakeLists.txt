@@ -35,7 +35,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 add_library(my_project STATIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include/json.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/exsept.hpp
-        sources/json.cpp)
+        sources/json.cpp sources/main.cpp)
 add_executable(tests
 
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
